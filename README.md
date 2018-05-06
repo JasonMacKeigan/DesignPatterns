@@ -8,3 +8,4 @@ An implementation of all computer science design patterns using the Java Program
 * [Lazy Initialization](src/main/java/patterns/lazy_initialization)
 * [Object Pool](src/main/java/patterns/object_pool)
 * [Multition](src/main/java/patterns/multition)
+* [Adapter](src/main/java/patterns/adapter)
