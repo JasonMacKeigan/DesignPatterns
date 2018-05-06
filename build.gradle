@@ -5,6 +5,9 @@ repositories {
 }
 
 dependencies {
+    /**
+     * commons-pool2 necessary for object pool pattern implementation.
+     */
     compile group: 'org.apache.commons', name: 'commons-pool2', version: '2.5.0'
 
     compile group: 'junit', name: 'junit', version: '4.12'
