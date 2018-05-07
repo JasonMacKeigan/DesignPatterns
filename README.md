@@ -10,3 +10,4 @@ An implementation of all computer science design patterns using the Java Program
 * [Multition](src/main/java/patterns/multition)
 * [Adapter](src/main/java/patterns/adapter)
 * [Factory Method](src/main/java/patterns/factory_method)
+* [Abstract Factory](src/main/java/patterns/abstract_factory)
