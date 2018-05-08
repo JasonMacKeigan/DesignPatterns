@@ -11,3 +11,4 @@ An implementation of all computer science design patterns using the Java Program
 * [Adapter](src/main/java/patterns/adapter)
 * [Factory Method](src/main/java/patterns/factory_method)
 * [Abstract Factory](src/main/java/patterns/abstract_factory)
+* [Null Object](src/main/java/patterns/null_object)
