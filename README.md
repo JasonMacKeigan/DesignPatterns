@@ -14,3 +14,4 @@ An implementation of all computer science design patterns using the Java Program
 * [Null Object](src/main/java/patterns/null_object)
 * [Momento](src/main/java/patterns/momento)
 * [State](src/main/java/patterns/state)
+* [Command](src/main/java/patterns/commands)
