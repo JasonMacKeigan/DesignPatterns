@@ -15,3 +15,4 @@ An implementation of all computer science design patterns using the Java Program
 * [Momento](src/main/java/patterns/momento)
 * [State](src/main/java/patterns/state)
 * [Command](src/main/java/patterns/commands)
+* [Observer](src/main/java/patterns/observer)
