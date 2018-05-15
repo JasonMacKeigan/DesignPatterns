@@ -5,25 +5,35 @@ package patterns.momento;
  */
 public class Originator {
 
+    private Caretaker caretaker = new Caretaker();
+
     private String identifier;
 
     public Originator(String identifier) {
         this.identifier = identifier;
+
+        save();
     }
 
-    public Momento toMomento() {
-        return new Momento(identifier);
+    private void save() {
+        caretaker.add(new Momento(identifier));
     }
 
-    public void restore(Momento momento) {
+    public void restoreToLast() {
+        restore(caretaker.size() - 1);
+    }
+
+    public void restoreToFirst() {
+        restore(0);
+    }
+
+    public void restore(int index) {
+        Momento momento = caretaker.getOrNull(index);
+
+        if (momento == null) {
+            throw new IllegalArgumentException("Cannot restore momento from index.");
+        }
         this.identifier = momento.getIdentifier();
-    }
-
-    @Override
-    public String toString() {
-        return "Originator{" +
-                "identifier='" + identifier + '\'' +
-                '}';
     }
 
     public String getIdentifier() {
@@ -32,5 +42,12 @@ public class Originator {
 
     public void setIdentifier(String identifier) {
         this.identifier = identifier;
+
+        save();
+    }
+
+    @Override
+    public String toString() {
+        return "Originator{" + "identifier='" + identifier + '\'' + '}';
     }
 }
