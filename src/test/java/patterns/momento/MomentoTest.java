@@ -10,23 +10,28 @@ import java.util.logging.Logger;
  */
 public class MomentoTest {
 
-    public static void main(String[] args) {
+    @Test
+    public void assertCaretakerRestore() {
+        Caretaker caretaker = new Caretaker();
+
         Originator originator = new Originator("jason");
 
-        Momento firstMomento = originator.toMomento();
+        caretaker.add(originator.toMomento());
+
+        originator.setIdentifier("jason1");
+
+        caretaker.add(originator.toMomento());
 
         originator.setIdentifier("jason2");
 
-        Momento secondMomento = originator.toMomento();
+        caretaker.add(originator.toMomento());
 
-        assert originator.getIdentifier().equals(secondMomento.getIdentifier());
+        originator.setIdentifier("jason3");
 
-        originator.restore(firstMomento);
+        caretaker.add(originator.toMomento());
 
-        assert originator.getIdentifier().equals(firstMomento.getIdentifier());
+        originator.restore(caretaker.getLastOrNull());
 
-        System.out.println("first-momento: " + firstMomento.getIdentifier());
-        System.out.println("second-momento: " + secondMomento.getIdentifier());
-        System.out.println("originator: " + originator.getIdentifier());
+        assert originator.getIdentifier().equals("jason3");
     }
 }

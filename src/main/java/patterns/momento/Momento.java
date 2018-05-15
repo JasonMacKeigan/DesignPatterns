@@ -14,4 +14,11 @@ public class Momento {
     public String getIdentifier() {
         return identifier;
     }
+
+    @Override
+    public String toString() {
+        return "Momento{" +
+                "identifier='" + identifier + '\'' +
+                '}';
+    }
 }
