@@ -46,7 +46,7 @@ public class PooledObject implements AutoCloseable, Closeable {
     }
 
     public boolean isExpired() {
-        return System.nanoTime() - timeOfAvailability >= TimeUnit.NANOSECONDS.convert(expirationTime, expirationTimeUnit);
+        return System.nanoTime() - timeOfAvailability >= expirationTimeUnit.toNanos(expirationTime);
     }
 
     @Override
